@@ -1,0 +1,271 @@
+
+body {
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  overflow-x: hidden;
+  margin-left: 0;
+  margin-top: 0;
+  background-color: #faebd7;
+  font-size: 16px;
+}
+
+/* NAV SECTION */
+
+.nav-container {
+    display: flex;
+    position: fixed;
+    width: 100%; 
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+  }
+  
+  .item {
+    height: 100px;
+    width: 300px; /* A fixed width as the default */
+  }
+  
+  .item-center { 
+    flex-grow: 1; /* Set the middle element to grow and stretch */
+  }
+  
+  .item + .item { 
+    margin-left: 2%; 
+  }
+
+.Logo {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 4rem;
+}
+
+  .Logo img {
+    max-height: 100px;
+    position: sticky;
+  }
+
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 4rem;
+    height: 100%;
+  }
+
+  .nav-icon img {
+    height: 60px;
+  }
+
+  
+/* HEADER SECTION */
+
+  .header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .header-item {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 48%;
+    height: 100px;
+    white-space: normal; 
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: antiquewhite;
+    background-image: url(./ressources/ferhat-deniz-fors-MUXT1ykAz4c-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .header-item:nth-child(3n) {
+    width: 100%;
+  }
+
+  .drei {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 6rem;
+    padding-left: 4rem;
+    overflow-wrap: break-word;
+    text-decoration: none !important;
+  }
+
+  .vier {
+    align-items: flex-end;
+  }
+
+  .fuenf {
+    align-items: flex-end;
+  }
+
+  .header-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+
+/* GRID SECTION */
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4rem;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex: 0 32%;
+    height: 100%;
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    border-radius: 1.25rem;
+  }
+
+  .one {
+    font-size: 5rem;
+    height: 100%;
+  }
+
+/* PRODUCT CARD */
+
+.product-card {
+  max-width: 30rem;
+  background-color: whitesmoke;
+  padding: 1rem;
+  font-family: 'Protest Strike', sans-serif;
+  color: #4C1481;
+  cursor: pointer;
+}
+
+.product-card img {
+  max-width: 100%;
+  min-width: 15rem;
+}
+
+.product-card h4 {
+  font-size: 2rem;
+  margin: .5rem 0;
+}
+
+.product-card div {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1%;
+  align-items: center;
+}
+
+.product-card button {
+  background-color: #4C1481;
+  color: antiquewhite;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+}
+
+.product-card:hover {
+  background-color: #4C1481;
+  color: #faebd7;
+  transition:.5s ease-in-out;
+}
+
+.product-card:hover button {
+color: #4C1481;
+background-color: #faebd7;
+}
+
+/* SQUARE GRID SECTION */
+
+.square-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5%;
+    margin-top: 10rem;
+  }
+  
+  .square-grid-item {
+    width: 32%;
+     /* Same as width, sets height */
+    position: relative;
+  }
+
+  .square-grid-item img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 2 / 4;
+  }
+
+  
+ /*  STACK GRID SECTION  */
+
+ .stack-container {
+    display: flex;
+    margin-top: 10rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4C1481;
+    color: #faebd7;
+    border-radius: 3rem 3rem 0 0;
+    padding: 3rem;
+  }
+  
+  .stack-grid-item {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    height: 20rem;
+    line-height: 2rem;
+  }
+
+  /*  MEDIA QUERIES */
+
+  @media only screen and (max-width: 870px) {
+
+  .Logo {
+      margin-left: 2rem;
+  }
+
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 2rem;
+    height: 100%;
+  }
+
+  .drei {
+      font-size: 3rem;
+      padding-left: 2rem;
+        }
+
+  .header-item {
+    margin-top: 2rem;
+    }
+
+    .grid-container {
+      margin: 2rem;
+    }
+
+    .one {
+      font-size: 3rem;
+      height: 100%;
+    }
+
+    .product-card {
+      font-size: 0.9rem;
+    }
+
+  }
